@@ -1,0 +1,9 @@
+<div ng-controller="secondController">
+    <h1>Hello {{name}}. <small>How's your evening going?</small></h1>
+</div>
+<h3>Search results</h3>
+<div class="list-group">
+    <search-result person-object="person" formatted-address-function="formattedAddress(aperson)" ng-repeat="person in people">
+        Transclude, here is the result
+    </search-result>
+</div>

@@ -1,0 +1,27 @@
+<div ng-controller="mainController">
+    <h1>Hello {{name}}. <small>How's your day going?</small></h1>
+    <br />
+    <br />
+    <div>
+        <label for="twitter">What is your twitter handler?</label>
+        <input type="text" ng-model="handle">
+    </div>
+    <br />
+    <div class="alert" ng-class="{ 'alert-warning': handle.length < characters, 'alert-danger': handle.length > characters }" ng-if="handle.length !== characters">
+        <div ng-show="handle.length < characters">
+            You have less than 5 characters!
+        </div>
+        <div ng-show="handle.length > characters">
+            You have more than 5 characters!
+        </div>
+    </div>
+    <hr>
+    <h4>twitter.com/{{ lowercasehandle() }}</h4>
+        
+    <h3>Rules</h3>
+    <ul>
+        <li ng-repeat="rule in rules">
+            {{ rule.rulename }}
+        </li>
+    </ul>
+</div>
