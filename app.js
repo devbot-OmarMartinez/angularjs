@@ -75,10 +75,8 @@ myApp.controller('secondController', function($scope, $log, $filter, $resource, 
         }
     ]
     
-    $scope.formattedAddress = function(person) {
-      
-        return person.address + ', ' + person.city + ', ' + person.state + ' ' + person.zip;
-        
+    $scope.formattedAddress = function(person) {      
+        return person.address + ', ' + person.city + ', ' + person.state + ' ' + person.zip;        
     };
 });
 
