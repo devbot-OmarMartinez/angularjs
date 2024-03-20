@@ -22,7 +22,6 @@ myApp.controller('mainController', function($scope, $log, $filter, $resource, $t
     $log.info("Console info")
     $log.error("Console error")
     $log.debug("Console debug")
-    // console.log($log);
 
     $scope.name = "Omar";
     $scope.handle = "";
