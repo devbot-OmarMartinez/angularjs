@@ -1,27 +1,13 @@
 <div ng-controller="mainController">
-    <h1>Hello {{name}}. <small>How's your day going?</small></h1>
-    <br />
-    <br />
-    <div>
-        <label for="twitter">What is your twitter handler?</label>
-        <input type="text" ng-model="handle">
-    </div>
-    <br />
-    <div class="alert" ng-class="{ 'alert-warning': handle.length < characters, 'alert-danger': handle.length > characters }" ng-if="handle.length !== characters">
-        <div ng-show="handle.length < characters">
-            You have less than 5 characters!
-        </div>
-        <div ng-show="handle.length > characters">
-            You have more than 5 characters!
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h4>Forecast by City</h4>
+            <form ng-submit="submit()">
+                <div class="form-group">
+                    <input type="text" ng-model="city" class="form-control" ng-model="city" />
+                </div>
+                <input type="submit" class="btn btn-primary" />
+            </form>
         </div>
     </div>
-    <hr>
-    <h4>twitter.com/{{ lowercasehandle() }}</h4>
-        
-    <h3>Rules</h3>
-    <ul>
-        <li ng-repeat="rule in rules">
-            {{ rule.rulename }}
-        </li>
-    </ul>
 </div>
